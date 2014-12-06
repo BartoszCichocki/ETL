@@ -41,15 +41,15 @@
   <ItemGroup>
     <Compile Include="Core\Components\Package\IPackage.cs" />
     <Compile Include="Core\Components\Package\Load\ILoad.cs" />
+    <Compile Include="Core\Components\Package\Package.cs" />
     <Compile Include="Core\Components\Package\Transform\ITransform.cs" />
     <Compile Include="Core\Components\Package\Extract\IExtract.cs" />
+    <Compile Include="Core\Components\StorageProvider\IStorageProvider.cs" />
     <Compile Include="Core\Components\Storage\IStorage.cs" />
-    <Compile Include="Core\Components\Storage\MemoryStorage.cs" />
+    <Compile Include="Core\Components\Storage\MemmoryStorage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Core\Components\PackageContainer\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
