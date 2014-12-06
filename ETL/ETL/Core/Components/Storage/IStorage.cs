@@ -4,10 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETL
-{
-    public class Class1
-    {
-
+namespace ETL.Core.Components.Storage {
+    public interface IStorage {
     }
 }

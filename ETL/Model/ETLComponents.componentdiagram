@@ -17,19 +17,13 @@
               <componentMoniker Id="7e604bbc-7ae9-4311-b997-b6ba729e29da" LastKnownName="Component5" />
             </type_NamedElement>
           </part>
-          <part Id="8df131b1-27e0-4b47-9a3f-e66216e79e7e" name="SourceProvider" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="true">
-            <elementDefinition Id="346c867d-7712-4a2e-a3d2-217e6899015d" />
-            <type_NamedElement>
-              <componentMoniker Id="dd8673df-bfef-4830-b2f3-c5a8c82d4e5d" LastKnownName="Component6" />
-            </type_NamedElement>
-          </part>
           <part Id="295c1a3b-d8de-448a-af6e-76640424c5ed" name="RowTransformator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="true">
             <elementDefinition Id="c142d019-b0b7-4e43-ae48-81b1ec2d634b" />
             <type_NamedElement>
               <componentMoniker Id="96c040bb-48ea-4c85-890c-8c4043b75040" LastKnownName="Component7" />
             </type_NamedElement>
           </part>
-          <part Id="24d0f8e2-1e1d-49de-840a-b951cd2b8e5b" name="BulkLoad" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="true">
+          <part Id="24d0f8e2-1e1d-49de-840a-b951cd2b8e5b" name="Load" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="true">
             <elementDefinition Id="ad4b0fe3-13f5-4be1-8fe6-3dd6f46bca52" />
             <type_NamedElement>
               <componentMoniker Id="ac8c0ba6-79f2-48f6-9b3f-f77b68c47355" LastKnownName="Component8" />
@@ -66,10 +60,10 @@
               <interfaceMoniker Id="bb2cb0b9-5267-466f-af9a-6f1dddfb291f" LastKnownName="ITransform" />
             </type_NamedElement>
           </requiredInterface>
-          <requiredInterface Id="8be880cf-35bf-4d88-bfb6-9357e1401a43" name="Port3" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
-            <elementDefinition Id="8cb5e300-e63e-4f5a-b8b8-fbb4d5b30c45" />
+          <requiredInterface Id="fbe18c52-afd5-4be5-80b8-321dfc9c85f4" name="Port4" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="9490cc3a-53da-47a6-bf65-b26a13f748d4" />
             <type_NamedElement>
-              <interfaceMoniker Id="6299751e-2aaa-4991-bc56-ba93bbafdf61" LastKnownName="ILoad" />
+              <interfaceMoniker Id="10090992-06cd-4a27-bdc2-c6721436c27b" LastKnownName="ILoad" />
             </type_NamedElement>
           </requiredInterface>
         </ownedAttributesInternal>
@@ -88,7 +82,7 @@
           <requiredInterface Id="785e632a-1ab0-48e6-a41a-7c2587135f0e" name="Port2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
             <elementDefinition Id="ea5a3fcd-e78f-4730-9bda-df7f296d6108" />
             <type_NamedElement>
-              <interfaceMoniker Id="aa0260e1-84be-4ffc-98ee-76fca4779627" LastKnownName="ISource" />
+              <interfaceMoniker Id="aa0260e1-84be-4ffc-98ee-76fca4779627" LastKnownName="IStorage" />
             </type_NamedElement>
           </requiredInterface>
         </ownedAttributesInternal>
@@ -105,36 +99,13 @@
       </Interface>
     </modelContainsNamedElements>
     <modelContainsNamedElements>
-      <Interface Id="6299751e-2aaa-4991-bc56-ba93bbafdf61" name="ILoad" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="46a39101-7a33-4894-9456-07a19844d38b" />
-      </Interface>
-    </modelContainsNamedElements>
-    <modelContainsNamedElements>
       <Interface Id="590d2bdc-b487-4aef-ad8d-3135ab768e08" name="IExtract" isAbstract="false" isLeaf="false">
         <elementDefinition Id="d365b7ae-dc26-4534-8c27-54ff210dcb57" />
       </Interface>
     </modelContainsNamedElements>
     <modelContainsNamedElements>
-      <Interface Id="aa0260e1-84be-4ffc-98ee-76fca4779627" name="ISource" isAbstract="false" isLeaf="false">
+      <Interface Id="aa0260e1-84be-4ffc-98ee-76fca4779627" name="IStorage" isAbstract="false" isLeaf="false">
         <elementDefinition Id="3193e197-fdec-4979-a788-4f65e31451da" />
-      </Interface>
-    </modelContainsNamedElements>
-    <componentModelHasComponents>
-      <component Id="dd8673df-bfef-4830-b2f3-c5a8c82d4e5d" name="Component6" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="b0e2bcca-e311-47d3-9dfd-d17f7eeee3e9" />
-        <ownedAttributesInternal>
-          <providedInterface Id="9fe6ca43-a72a-4be8-bd6d-de44ef2c0955" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
-            <elementDefinition Id="1623300d-db94-4c07-8c56-2ad0405f112a" />
-            <type_NamedElement>
-              <interfaceMoniker Id="6c231869-5704-48d4-a088-b9b9da4ca86f" LastKnownName="ISource" />
-            </type_NamedElement>
-          </providedInterface>
-        </ownedAttributesInternal>
-      </component>
-    </componentModelHasComponents>
-    <modelContainsNamedElements>
-      <Interface Id="6c231869-5704-48d4-a088-b9b9da4ca86f" name="ISource" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="6e5ce1e8-3818-4325-bc71-0d74800b5814" />
       </Interface>
     </modelContainsNamedElements>
     <componentModelHasComponents>
@@ -159,26 +130,21 @@
       <component Id="ac8c0ba6-79f2-48f6-9b3f-f77b68c47355" name="Component8" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="815c1c7c-a7aa-4c63-877c-6cac622a2ed7" />
         <ownedAttributesInternal>
-          <providedInterface Id="d5433d9b-cae1-4ea3-a51b-0f4a623f539f" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
-            <elementDefinition Id="b8380e0f-39e1-472c-b27f-951fd4e874f9" />
-            <type_NamedElement>
-              <interfaceMoniker Id="469c367e-ebca-4557-a683-8ae301296522" LastKnownName="ILoad" />
-            </type_NamedElement>
-          </providedInterface>
           <requiredInterface Id="8cf28a80-e148-4c2c-bd78-bea079a1e681" name="Port2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
             <elementDefinition Id="2794c24b-d44f-4498-8b50-12ca70c272b6" />
             <type_NamedElement>
               <interfaceMoniker Id="f235b9d0-30ca-4d36-8caf-c5a639d72f35" LastKnownName="IStorage" />
             </type_NamedElement>
           </requiredInterface>
+          <providedInterface Id="6923a1e6-24ea-499a-93af-3be8a4bd1cc9" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="f5db6b0c-1d10-4857-932c-03ceeaa226b5" />
+            <type_NamedElement>
+              <interfaceMoniker Id="d22c7c42-c71a-48b6-8406-a418613f46b2" LastKnownName="ILoad" />
+            </type_NamedElement>
+          </providedInterface>
         </ownedAttributesInternal>
       </component>
     </componentModelHasComponents>
-    <modelContainsNamedElements>
-      <Interface Id="469c367e-ebca-4557-a683-8ae301296522" name="ILoad" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="4562b9d4-9dcf-41c4-96db-77153b35458d" />
-      </Interface>
-    </modelContainsNamedElements>
     <modelContainsNamedElements>
       <Interface Id="f235b9d0-30ca-4d36-8caf-c5a639d72f35" name="IStorage" isAbstract="false" isLeaf="false">
         <elementDefinition Id="a66a4707-d97b-45a6-8250-20aa844aab70" />
@@ -194,6 +160,12 @@
               <interfaceMoniker Id="3a3dbe46-2ade-44a7-b402-4c4092dc32bf" LastKnownName="IStorage" />
             </type_NamedElement>
           </providedInterface>
+          <providedInterface Id="376e11bc-e5c1-4aaa-a216-0d2aea61aab1" name="Port2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="9581deba-7f41-407b-baf2-24cb7f6f2bd8" />
+            <type_NamedElement>
+              <interfaceMoniker Id="5c88077e-092e-47f1-b326-a427b756bd30" LastKnownName="IStorage" />
+            </type_NamedElement>
+          </providedInterface>
         </ownedAttributesInternal>
       </component>
     </componentModelHasComponents>
@@ -205,6 +177,21 @@
     <modelContainsNamedElements>
       <Interface Id="7d6ca097-829b-4eec-b63d-990812ae59e8" name="IPackage" isAbstract="false" isLeaf="false">
         <elementDefinition Id="245a7772-45ed-4304-bd95-8bc212a4e20a" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="5c88077e-092e-47f1-b326-a427b756bd30" name="IStorage" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6f54fe79-ea67-4ccd-a422-08a5b048b756" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="d22c7c42-c71a-48b6-8406-a418613f46b2" name="ILoad" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4168b845-e3be-4f55-b241-e73476c4786c" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="10090992-06cd-4a27-bdc2-c6721436c27b" name="ILoad" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7b9c9288-ba6f-40a3-9c44-16a8178de148" />
       </Interface>
     </modelContainsNamedElements>
   </packagedElements>

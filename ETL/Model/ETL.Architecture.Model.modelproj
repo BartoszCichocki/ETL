@@ -23,9 +23,9 @@
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
     <Folder Include="ModelDefinition\" />
-    <Content Include="ETLComponents.componentdiagram">
+    <Compile Include="ETLComponents.componentdiagram">
       <SubType>Content</SubType>
-    </Content>
+    </Compile>
     <Content Include="ETLComponents.componentdiagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>ETLComponents.componentdiagram</DependentUpon>

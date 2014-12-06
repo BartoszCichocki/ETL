@@ -61,23 +61,6 @@
             </type_NamedElement>
           </part>
           <part
-            Id="346c867d-7712-4a2e-a3d2-217e6899015d"
-            name="SourceProvider"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="Composite"
-            isComposite="true">
-            <type_NamedElement>
-              <componentMoniker
-                Id="b0e2bcca-e311-47d3-9dfd-d17f7eeee3e9"
-                LastKnownName="Component6"
-                LastKnownLocation="Model.uml" />
-            </type_NamedElement>
-          </part>
-          <part
             Id="c142d019-b0b7-4e43-ae48-81b1ec2d634b"
             name="RowTransformator"
             isLeaf="false"
@@ -96,7 +79,7 @@
           </part>
           <part
             Id="ad4b0fe3-13f5-4be1-8fe6-3dd6f46bca52"
-            name="BulkLoad"
+            name="Load"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -256,8 +239,8 @@
             </type_NamedElement>
           </requiredInterface>
           <requiredInterface
-            Id="8cb5e300-e63e-4f5a-b8b8-fbb4d5b30c45"
-            name="Port3"
+            Id="9490cc3a-53da-47a6-bf65-b26a13f748d4"
+            name="Port4"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -269,7 +252,7 @@
             isBehavior="false">
             <type_NamedElement>
               <interfaceMoniker
-                Id="46a39101-7a33-4894-9456-07a19844d38b"
+                Id="7b9c9288-ba6f-40a3-9c44-16a8178de148"
                 LastKnownName="ILoad"
                 LastKnownLocation="Model.uml" />
             </type_NamedElement>
@@ -340,7 +323,7 @@
             <type_NamedElement>
               <interfaceMoniker
                 Id="3193e197-fdec-4979-a788-4f65e31451da"
-                LastKnownName="ISource"
+                LastKnownName="IStorage"
                 LastKnownLocation="Model.uml" />
             </type_NamedElement>
           </requiredInterface>
@@ -357,7 +340,7 @@
     <packageHasNamedElement>
       <Interface
         Id="3193e197-fdec-4979-a788-4f65e31451da"
-        name="ISource"
+        name="IStorage"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
@@ -450,25 +433,6 @@
         isLeaf="false"
         isActiveClass="false">
         <ownedAttributesInternal>
-          <providedInterface
-            Id="b8380e0f-39e1-472c-b27f-951fd4e874f9"
-            name="Port1"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false"
-            isService="false"
-            isBehavior="false">
-            <type_NamedElement>
-              <interfaceMoniker
-                Id="4562b9d4-9dcf-41c4-96db-77153b35458d"
-                LastKnownName="ILoad"
-                LastKnownLocation="Model.uml" />
-            </type_NamedElement>
-          </providedInterface>
           <requiredInterface
             Id="2794c24b-d44f-4498-8b50-12ca70c272b6"
             name="Port2"
@@ -488,6 +452,25 @@
                 LastKnownLocation="Model.uml" />
             </type_NamedElement>
           </requiredInterface>
+          <providedInterface
+            Id="f5db6b0c-1d10-4857-932c-03ceeaa226b5"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="4168b845-e3be-4f55-b241-e73476c4786c"
+                LastKnownName="ILoad"
+                LastKnownLocation="Model.uml" />
+            </type_NamedElement>
+          </providedInterface>
         </ownedAttributesInternal>
       </component>
     </packageHasNamedElement>
@@ -532,6 +515,25 @@
                 LastKnownLocation="Model.uml" />
             </type_NamedElement>
           </providedInterface>
+          <providedInterface
+            Id="9581deba-7f41-407b-baf2-24cb7f6f2bd8"
+            name="Port2"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="6f54fe79-ea67-4ccd-a422-08a5b048b756"
+                LastKnownName="IStorage"
+                LastKnownLocation="Model.uml" />
+            </type_NamedElement>
+          </providedInterface>
         </ownedAttributesInternal>
       </component>
     </packageHasNamedElement>
@@ -546,6 +548,27 @@
       <Interface
         Id="245a7772-45ed-4304-bd95-8bc212a4e20a"
         name="IPackage"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="6f54fe79-ea67-4ccd-a422-08a5b048b756"
+        name="IStorage"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="4168b845-e3be-4f55-b241-e73476c4786c"
+        name="ILoad"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="7b9c9288-ba6f-40a3-9c44-16a8178de148"
+        name="ILoad"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
