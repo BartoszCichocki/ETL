@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ETL.Core.Components.Package {
-    public interface ITransform {
-        IPackageOutputItem Transform(IPackageInputItem element);
+    public interface IPackageOutputItem {
     }
 }
