@@ -1,4 +1,5 @@
-﻿using ETL.Core.Components.Storage;
+﻿using ETL.Core.Components.Package;
+using ETL.Core.Components.Storage;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +8,8 @@ using System.Threading.Tasks;
 
 namespace ETL.Core.Components.StorageProvider {
     public interface IStorageProvider {
-        
-        IList<T> Get<T>() where T :class ;
-
-        void Put<T>(IList<T> items);
+        IDisposable BeginTransaction();
+        void CommitTransaction();
+        void Save(IList<IPackageOutputItem> items);
     }
 }

@@ -39,15 +39,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\Components\Package\IPackage.cs" />
-    <Compile Include="Core\Components\Package\IPackageOutputItem.cs" />
-    <Compile Include="Core\Components\Package\IPackageInputItem.cs" />
-    <Compile Include="Core\Components\Package\Load\ILoad.cs" />
-    <Compile Include="Core\Components\Package\Package.cs" />
-    <Compile Include="Core\Components\Package\Transform\ITransform.cs" />
-    <Compile Include="Core\Components\Package\Extract\IExtract.cs" />
-    <Compile Include="Core\Components\Storage\IStorageProvider.cs" />
-    <Compile Include="Core\Components\Storage\MemmoryStorageProvider.cs" />
+    <Compile Include="Core\Components\PackageComponent\IPackage.cs" />
+    <Compile Include="Core\Components\PackageComponent\IPackageOutputItem.cs" />
+    <Compile Include="Core\Components\PackageComponent\IPackageInputItem.cs" />
+    <Compile Include="Core\Components\PackageComponent\Load\ILoad.cs" />
+    <Compile Include="Core\Components\PackageComponent\Package.cs" />
+    <Compile Include="Core\Components\PackageComponent\Transform\ITransform.cs" />
+    <Compile Include="Core\Components\PackageComponent\Extract\IExtract.cs" />
+    <Compile Include="Core\Components\SourceComponent\ISourceProvider.cs" />
+    <Compile Include="Core\Components\SourceComponent\SourceProviders\MemorySourceProvider.cs" />
+    <Compile Include="Core\Components\StorageComponent\IStorageProvider.cs" />
+    <Compile Include="Core\Components\StorageComponent\StorageProviders\MemoryStorageProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

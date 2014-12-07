@@ -1,4 +1,5 @@
-﻿using ETL.Core.Components.StorageProvider;
+﻿using ETL.Core.Components.SourceComponent;
+using ETL.Core.Components.StorageProvider;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,8 +12,8 @@ namespace ETL.Core.Components.Package {
         ITransform,
         ILoad
     {
-        IStorageProvider GetInputStorageProvider();
+        ISourceProvider GetSourceProvider();
 
-        IStorageProvider GetOutputStorageProvider();
+        IStorageProvider GetStorageProvider();
     }
 }
